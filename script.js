@@ -40,13 +40,31 @@ function generatePassword()
 
   console.log("We did it!");
 
-  
-  
-  // if()
-  //   if(length < ){
-  //   length = prompt("Your password is")
-  // }
-}
+  //Object to hold all parameter that the user wants.
+  var parameter = {
+    lowercase: false,
+    uppercase: false,
+    numeric: false,
+    specialChar: false
+  }
 
+  parameter.lowercase = confirm("Do you want your password to contain lowercase characters?");
+  parameter.uppercase = confirm("Do you want your password to contain uppercase characters?");
+  parameter.numeric = confirm("Do you want your password to contain numbers?");
+  parameter.specialChar = confirm("Do you want your password to contain special characters?");
+  console.log(parameter);
+
+  // While there is no parameters are true, reprompt the user to enter the parameter.
+  while(!(parameter.lowercase || parameter.uppercase || parameter.numeric || parameter.specialChar))
+  {
+    alert("Please select at least one parameter to populate your password with.");
+    parameter.lowercase = confirm("Do you want your password to contain lowercase characters?");
+    parameter.uppercase = confirm("Do you want your password to contain uppercase characters?");
+    parameter.numeric = confirm("Do you want your password to contain numbers?");
+    parameter.specialChar = confirm("Do you want your password to contain special characters?");
+  }
+
+
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
