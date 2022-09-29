@@ -1,4 +1,22 @@
 // Assignment Code
+var lowerCaseArr = [
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
+   "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+];
+var upperCaseArr = [
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+   "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+];
+var numericArr = [
+  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+];
+var specialCharArr = [
+  " ", "!", "\"", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".",
+  "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", "]", "^",
+  "_", "`", "{", "|", "}", "~"
+];
+
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -48,13 +66,14 @@ function generatePassword()
     specialChar: false
   }
 
+  // Establish parameters under which the password will be constructed from.
   parameter.lowercase = confirm("Do you want your password to contain lowercase characters?");
   parameter.uppercase = confirm("Do you want your password to contain uppercase characters?");
   parameter.numeric = confirm("Do you want your password to contain numbers?");
   parameter.specialChar = confirm("Do you want your password to contain special characters?");
   console.log(parameter);
 
-  // While there is no parameters are true, reprompt the user to enter the parameter.
+  // While there is no parameters are true, reprompt the user to enter the parameters.
   while(!(parameter.lowercase || parameter.uppercase || parameter.numeric || parameter.specialChar))
   {
     alert("Please select at least one parameter to populate your password with.");
@@ -64,7 +83,28 @@ function generatePassword()
     parameter.specialChar = confirm("Do you want your password to contain special characters?");
   }
 
+  // create an array to hold all the possible elements the password can hold
+  var fullArray = [];
+  if(parameter.lowercase)
+    fullArray = fullArray.concat(lowerCaseArr);
+  if(parameter.uppercase)
+    fullArray = fullArray.concat(upperCaseArr);
+  if(parameter.numeric)
+    fullArray = fullArray.concat(numericArr);
+  if(parameter.specialChar)
+    fullArray = fullArray.concat(specialCharArr);
+  console.log(fullArray);
 
+  var password = "";
+  for(var newChar = 0; newChar < length; newChar++)
+  {
+    password = password.concat(fullArray[Math.floor(Math.random() * fullArray.length)]);
+  }
+  return password;
+}
+
+function parseConfirmation (userInput) {
+  userInput = userInput.toLower
 }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
