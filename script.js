@@ -95,7 +95,12 @@ function generatePassword()
     fullArray = fullArray.concat(specialCharArr);
   console.log(fullArray);
 
+  //creating helper variable to hold the new password
   var password = "";
+  // for the length of Length.  
+  // create a new password by randomly selecting from fullArray
+  // a new character.
+  // and returning it to the parent function.
   for(var newChar = 0; newChar < length; newChar++)
   {
     password = password.concat(fullArray[Math.floor(Math.random() * fullArray.length)]);

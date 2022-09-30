@@ -1,92 +1,43 @@
-# 03 JavaScript: Password Generator
+# 03 Humane Password Generator
 
-## Your Task
+# Description
 
-This week’s challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+This web page takes in the user requirements of password length and character types required to create a valid password.  In doing so, we can pratice a new key techiques in Javascript.  Firstly, I pratice how to take in user input either through a prompt and open dialog box or through confirmation and rejection alert boxes.  I also pratice how to sanitize user inputs.  This webpage fails to create a password if it isn't given a valid length and if there is no character from which to select from.  I have written code to bounds the type of inputs that the user can give our javascript and reprompts the user for another input if the input should fail.  Data sanitization is very important for many user applications and pratice on this techique is always useful.  
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+I created this project as a way to tackle the simple loop of user input to output.  Password creation is universally useful, relatively annoying to create well by hand, and easy to display.  all these attributes make it the perfect project to use to pratice javascript with a simple front end.
 
-## User Story
+This project was interesting, learning how the different prompts, alerts and confirms interact with the user helps transfer my knowledge from python to javascript, and adjusting myself to the javascript syntax. In addition, when using the program in google chrome versus firefox, it is interesting how prompt and alert work
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+Link:
+https://philiphuang2.github.io/Humane-Password-Generator/
 
-## Acceptance Criteria
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+# Examples
+## Firefox
+![Firefox Example](/Assets/Firefox-Prompt-Example.PNG)
+## Google Chrome
+![Google Chrome Example](/Assets/Chrome-Prompt-Example.PNG)
 
-## Mock-Up
+# License
 
-The following image shows the web application's appearance and functionality:
+MIT License
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-challenge-demo.png)
+Copyright (c) 2022 Philip Huang
 
-## Grading Requirements
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This challenge is graded based on the following criteria: 
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
